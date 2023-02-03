@@ -1,6 +1,6 @@
 {
   "name": "@i.shubham.kr/number-to-word",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "to convert any amount / number to word",
   "main": "index.js",
   "scripts": {
