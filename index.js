@@ -105,7 +105,7 @@ function numberToWords(number, formate) {
           tenth[num[5][0]] + ' ' + oneToTwenty[num[5][1]]
         : ''
   } else {
-    return 'Invalid formate'
+    return number
   }
 
   return str
