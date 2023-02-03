@@ -13,7 +13,7 @@ npm i @i.shubham.kr/number-to-word
 ```js
 const numberToWord = require('@i.shubham.kr/number-to-word')
 
-console.log(numberToWord(1234567890,  lang: 'USD' ))
+console.log(numberToWord(1234567890, 'USD' ))
 // Output: One Billion Two Hundred Thirty Four Million Five Hundred Sixty Seven Thousand Eight Hundred Ninety
 ```
 
