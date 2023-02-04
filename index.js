@@ -34,6 +34,46 @@ function numberToWords(number, formate) {
     'ninety',
   ]
 
+  // for chinees number in chinese
+  let oneToTwentyChinese = [
+    '',
+    '一',
+    '二',
+    '三',
+    '四',
+    '五',
+    '六',
+    '七',
+    '八',
+    '九',
+    '十',
+    '十一',
+    '十二',
+    '十三',
+    '十四',
+    '十五',
+    '十六',
+    '十七',
+    '十八',
+    '十九',
+  ]
+  let tenthChinese = [
+    '',
+    '',
+    '二十',
+    '三十',
+    '四十',
+    '五十',
+    '六十',
+    '七十',
+    '八十',
+    '九十',
+  ]
+
+  if (number === null || number === undefined) {
+    return 'Number is required'
+  }
+
   if (number.toString().length > 9) {
     return 'Number is too big'
   }
@@ -103,6 +143,38 @@ function numberToWords(number, formate) {
       num[5] != 0
         ? oneToTwenty[Number(num[5])] ||
           tenth[num[5][0]] + ' ' + oneToTwenty[num[5][1]]
+        : ''
+  }
+  // chinees number in chinese
+  else if (formate === 'CN') {
+    str =
+      num[1] != 0
+        ? (oneToTwentyChinese[Number(num[1])] ||
+            tenthChinese[num[1][0]] + ' ' + oneToTwentyChinese[num[1][1]]) +
+          '亿 '
+        : ''
+    str +=
+      num[2] != 0
+        ? (oneToTwentyChinese[Number(num[2])] ||
+            tenthChinese[num[2][0]] + ' ' + oneToTwentyChinese[num[2][1]]) +
+          '万 '
+        : ''
+    str +=
+      num[3] != 0
+        ? (oneToTwentyChinese[Number(num[3])] ||
+            tenthChinese[num[3][0]] + ' ' + oneToTwentyChinese[num[3][1]]) +
+          '千 '
+        : ''
+    str +=
+      num[4] != 0
+        ? (oneToTwentyChinese[Number(num[4])] ||
+            tenthChinese[num[4][0]] + ' ' + oneToTwentyChinese[num[4][1]]) +
+          '百 '
+        : ''
+    str +=
+      num[5] != 0
+        ? oneToTwentyChinese[Number(num[5])] ||
+          tenthChinese[num[5][0]] + ' ' + oneToTwentyChinese[num[5][1]]
         : ''
   } else {
     return number

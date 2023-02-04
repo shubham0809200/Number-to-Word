@@ -13,17 +13,18 @@ npm i @i.shubham.kr/number-to-word
 ```js
 const numberToWord = require('@i.shubham.kr/number-to-word')
 
-console.log(numberToWord(1234567890, 'USD' ))
+console.log(numberToWord(1234567890, 'USD'))
 // Output: One Billion Two Hundred Thirty Four Million Five Hundred Sixty Seven Thousand Eight Hundred Ninety
 ```
 
 ## Options
 
-| Option | Type   | Default | Description                                       |
-| ------ | ------ | ------- | ------------------------------------------------- |
-| lang   | string | 'USD'   | Language of the output. Currently supports 'USD'  |
-| lang   | string | 'INR'   | Language of the output. Currently supports 'INR'. |
-| lang   | string | ''      | Invalid language will return the number as it is. |
+| Option | Type   | Default | Description                                                 |
+| ------ | ------ | ------- | ----------------------------------------------------------- |
+| lang   | string | 'USD'   | Language of the output. Currently supports 'United States'. |
+| lang   | string | 'INR'   | Language of the output. Currently supports 'Indian'.        |
+| lang   | string | 'CN'    | Language of the output. Currently supports 'Chinees'.       |
+| lang   | string | ''      | Invalid language will return the number as it is.           |
 
 ## GitHub [![](https://img.shields.io/badge/-GitHub-black)](https://github.com/shubham0809200)
 
